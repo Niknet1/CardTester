@@ -99,8 +99,22 @@ public class CTPanel extends JPanel implements MouseListener{
 
 	 
 	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		int x=e.getX();
+		int y=e.getY();
+		if(x>=0 && x<=200 && y>= 400 && y<= 750) {
+			box=cards.get(0);
+			cards.remove(0);
+		}
+		else if(x>=210 && x<=410 && y>= 400 && y<=750) {
+			box1=cards1.get(0);
+			cards1.remove(0);
+
+		}
+		else if(x>=getWidth()/5+100 && x<=getWidth()/5+100 && y>= 400 && y<=750) {
+			box2=cards2.get(0);
+			cards2.remove(0);
+
+		}
 		
 	}
 
