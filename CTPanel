@@ -1,0 +1,135 @@
+import java.awt.*;
+import javax.swing.*;
+import javax.imageio.ImageIO;
+import java.awt.event.KeyListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseEvent;
+import java.io.File;
+import java.awt.image.BufferedImage;
+import java.util.*;
+
+
+public class CTPanel extends JPanel implements MouseListener{
+	private BufferedImage box,box1,box2;
+	private ArrayList<BufferedImage> cards,cards1,cards2;
+	private BufferedImage a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,x,y,z,t,s;
+	
+	
+	
+	public CTPanel() {
+		cards = new ArrayList<BufferedImage>();
+		//a=ImageIO.readImageIO.read(CTPanel.class.getResource("/images/
+		try { 
+		a=ImageIO.read(CTPanel.class.getResource("/images/0LLSpy.png"));
+		b=ImageIO.read(CTPanel.class.getResource("/images/0LLSpy.png"));
+		c=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
+		d=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
+		e=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
+		f=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
+		g=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
+		h=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
+		i=ImageIO.read(CTPanel.class.getResource("/images/2LLPriest.png"));
+		j=ImageIO.read(CTPanel.class.getResource("/images/2LLPriest1.png"));
+		k=ImageIO.read(CTPanel.class.getResource("/images/3LLBaron.png"));
+		l=ImageIO.read(CTPanel.class.getResource("/images/3LLBaron.png"));
+		m=ImageIO.read(CTPanel.class.getResource("/images/4LLHandmaid.png"));
+		n=ImageIO.read(CTPanel.class.getResource("/images/4LLHandmaid.png"));
+		o=ImageIO.read(CTPanel.class.getResource("/images/5LLPrince.png"));
+		p=ImageIO.read(CTPanel.class.getResource("/images/5LLPrince.png"));
+		q=ImageIO.read(CTPanel.class.getResource("/images/6LLChancellor.png"));
+		r=ImageIO.read(CTPanel.class.getResource("/images/6LLChancellor.png"));
+		x=ImageIO.read(CTPanel.class.getResource("/images/7LLKing.png"));
+		y=ImageIO.read(CTPanel.class.getResource("/images/8LLCountess.png"));
+		z=ImageIO.read(CTPanel.class.getResource("/images/9LLPrincess.png"));
+		t = ImageIO.read(CTPanel.class.getResource("/images/cardback.png"));
+		s = ImageIO.read(CTPanel.class.getResource("/images/png-clipart-graphs-not-taken-graphy-two-dimensional-space-black-frame-miscellaneous-angle-thumbnail.png"));
+		}
+		catch(Exception e){
+			System.out.println("Exception Error");
+			return;
+		}
+		
+		
+		cards.add(a);
+		cards.add(b);
+		cards.add(c);
+		cards.add(d);
+		cards.add(e);
+		cards.add(f);
+		cards.add(g);
+		cards.add(h);
+		cards.add(i);
+		cards.add(j);
+		cards.add(k);
+		cards.add(l);
+		cards.add(m);
+		cards.add(n);
+		cards.add(o);
+		cards.add(p);
+		cards.add(q);
+		cards.add(r);
+		cards.add(x);
+		cards.add(y);
+		cards.add(z);
+		Collections.shuffle(cards);
+		box = s;
+		box1=s;
+		box2=s;
+		addMouseListener(this);
+		cards1=cards;
+		cards2=cards;
+		
+	}
+	public void paint(Graphics g) {
+		g.drawImage(t,getWidth()/4,getHeight()*3/5+60,200,350,null);
+		g.drawImage(box,0,0,200,350,null);
+		g.drawImage(box1,210, 0, 200,350, null);
+		g.drawImage(box2, getWidth()/5+100,0,200,350,null);
+		g.drawString("Player 1", 0, 355);
+		g.drawString("Drawn card", 210, 355);
+		g.drawString("Player 2", getWidth()/5+100, 355);
+
+	}
+
+
+
+	 
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+
+
+	 
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	 
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	 
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	 
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+}
