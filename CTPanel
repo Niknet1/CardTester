@@ -82,7 +82,10 @@ public class CTPanel extends JPanel implements MouseListener{
 		
 	}
 	public void paint(Graphics g) {
-		g.drawImage(t,getWidth()/4,getHeight()*3/5+60,200,350,null);
+		g.drawImage(t,0,400,200,350,null);
+		g.drawImage(t,210,400,200,350,null);
+		g.drawImage(t,getWidth()/5+100,400,200,350,null);
+
 		g.drawImage(box,0,0,200,350,null);
 		g.drawImage(box1,210, 0, 200,350, null);
 		g.drawImage(box2, getWidth()/5+100,0,200,350,null);
