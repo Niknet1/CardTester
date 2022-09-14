@@ -43,7 +43,7 @@ public class CTPanel extends JPanel implements MouseListener{
 		y=ImageIO.read(CTPanel.class.getResource("/images/8LLCountess.png"));
 		z=ImageIO.read(CTPanel.class.getResource("/images/9LLPrincess.png"));
 		t = ImageIO.read(CTPanel.class.getResource("/images/cardback.png"));
-		s = ImageIO.read(CTPanel.class.getResource("/images/png-clipart-graphs-not-taken-graphy-two-dimensional-space-black-frame-miscellaneous-angle-thumbnail.png"));
+		s = ImageIO.read(CTPanel.class.getResource("/images/41-419271_black-square-png-transparent-png.png"));
 		}
 		catch(Exception e){
 			System.out.println("Exception Error");
@@ -110,11 +110,12 @@ public class CTPanel extends JPanel implements MouseListener{
 			cards1.remove(0);
 
 		}
-		else if(x>=getWidth()/5+100 && x<=getWidth()/5+100 && y>= 400 && y<=750) {
+		else if(x>=getWidth()/5+100 && x<=getWidth()/5+300 && y>= 400 && y<=750) {
 			box2=cards2.get(0);
 			cards2.remove(0);
 
 		}
+		repaint();
 		
 	}
 
@@ -147,6 +148,9 @@ public class CTPanel extends JPanel implements MouseListener{
 	 
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
+		
+	}
+	public void compareCards(BufferedImage t, BufferedImage s) {
 		
 	}
 }
