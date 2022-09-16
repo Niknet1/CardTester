@@ -13,8 +13,7 @@ import java.util.*;
 public class CTPanel extends JPanel implements MouseListener{
 	private BufferedImage back,back1,back2;
 	private ArrayList<BufferedImage> cards,cards1,cards2;
-	private BufferedImage a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,x,y,z,t,s;
-	private BufferedImage blox,blox1,blox2,blox3,blox4,blox5,blox6,blox7,blox8,blox9;
+	private BufferedImage a,b,c,d,e,f,g1,h,i,j,k,l,m,n,o,p,q,r,x,y,z,t,s;
 	
 	
 	
@@ -28,7 +27,7 @@ public class CTPanel extends JPanel implements MouseListener{
 		d=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
 		e=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
 		f=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
-		g=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
+		g1=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
 		h=ImageIO.read(CTPanel.class.getResource("/images/1LLGuard.png"));
 		i=ImageIO.read(CTPanel.class.getResource("/images/2LLPriest.png"));
 		j=ImageIO.read(CTPanel.class.getResource("/images/2LLPriest1.png"));
@@ -45,16 +44,7 @@ public class CTPanel extends JPanel implements MouseListener{
 		z=ImageIO.read(CTPanel.class.getResource("/images/9LLPrincess.png"));
 		t = ImageIO.read(CTPanel.class.getResource("/images/cardback.png"));
 		s = ImageIO.read(CTPanel.class.getResource("/images/png-clipart-graphs-not-taken-graphy-two-dimensional-space-black-frame-miscellaneous-angle-thumbnail.png"));
-		blox = ImageIO.read(CTPanel.class.getResource("/images/zero2.png"));
-		blox1 = ImageIO.read(CTPanel.class.getResource("/images/block1.png"));
-		blox2 = ImageIO.read(CTPanel.class.getResource("/images/block2.png"));
-		blox3 = ImageIO.read(CTPanel.class.getResource("/images/block3.png"));
-		blox4 = ImageIO.read(CTPanel.class.getResource("/images/block4.png"));
-		blox5 = ImageIO.read(CTPanel.class.getResource("/images/block5.png"));
-		blox6 = ImageIO.read(CTPanel.class.getResource("/images/block6.png"));
-		blox7 = ImageIO.read(CTPanel.class.getResource("/images/block7.png"));
-		blox8 = ImageIO.read(CTPanel.class.getResource("/images/block8.png"));
-		blox9 = ImageIO.read(CTPanel.class.getResource("/images/block9.png"));
+		
 		}
 		catch(Exception e){
 			System.out.println("Exception Error");
@@ -68,7 +58,7 @@ public class CTPanel extends JPanel implements MouseListener{
 		cards.add(d);
 		cards.add(e);
 		cards.add(f);
-		cards.add(g);
+		cards.add(g1);
 		cards.add(h);
 		cards.add(i);
 		cards.add(j);
@@ -93,9 +83,43 @@ public class CTPanel extends JPanel implements MouseListener{
 		
 	}
 	public void paint(Graphics g) {
-		g.drawImage(blox,0,400,50,50,null);
-		g.drawImage(t,210,400,200,350,null);
-		g.drawImage(t,getWidth()/5+100,400,200,350,null);
+		
+		g.drawImage(a,0,400,100,100,null);
+		g.drawImage(c,100,400,100,100,null);
+		g.drawImage(i,0,500,100,100,null);
+		g.drawImage(k,100,500,100,100,null);
+		g.drawImage(m,0,600,100,100,null);
+		g.drawImage(o,100,600,100,100,null);
+		g.drawImage(q,0,700,100,100,null);
+		g.drawImage(x,100,700,100,100,null);
+		g.drawImage(y,0,800,100,100,null);
+		g.drawImage(z,100,800,100,100,null);
+		
+		g.drawImage(a,210,400,100,100,null);
+		g.drawImage(c,310,400,100,100,null);
+		g.drawImage(i,210,500,100,100,null);
+		g.drawImage(k,310,500,100,100,null);
+		g.drawImage(m,210,600,100,100,null);
+		g.drawImage(o,310,600,100,100,null);
+		g.drawImage(q,210,700,100,100,null);
+		g.drawImage(x,310,700,100,100,null);
+		g.drawImage(y,210,800,100,100,null);
+		g.drawImage(z,310,800,100,100,null);
+		
+		g.drawImage(a,getWidth()/5+100,400,100,100,null);
+		g.drawImage(c,getWidth()/5+200,400,100,100,null);
+		g.drawImage(i,getWidth()/5+100,500,100,100,null);
+		g.drawImage(k,getWidth()/5+200,500,100,100,null);
+		g.drawImage(m,getWidth()/5+100,600,100,100,null);
+		g.drawImage(o,getWidth()/5+200,600,100,100,null);
+		g.drawImage(q,getWidth()/5+100,700,100,100,null);
+		g.drawImage(x,getWidth()/5+200,700,100,100,null);
+		g.drawImage(y,getWidth()/5+100,800,100,100,null);
+		g.drawImage(z,getWidth()/5+200,800,100,100,null);
+
+
+
+
 
 		g.drawImage(back,0,0,200,350,null);
 		g.drawImage(back1,210, 0, 200,350, null);
@@ -112,19 +136,11 @@ public class CTPanel extends JPanel implements MouseListener{
 	public void mouseClicked(MouseEvent e) {
 		int x=e.getX();
 		int y=e.getY();
-		if(x>=0 && x<=200 && y>= 400 && y<= 750) {
+		if(x<=100 && x>=0 && y>=400 && y<=500) {
 			back=cards.get(0);
-			cards.remove(0);
 		}
-		else if(x>=210 && x<=410 && y>= 400 && y<=750) {
-			back1=cards1.get(0);
-			cards1.remove(0);
-
-		}
-		else if(x>=getWidth()/5+100 && x<=getWidth()/5+300 && y>= 400 && y<=750) {
-			back2=cards2.get(0);
-			cards2.remove(0);
-
+		else if(x<=100 && x>=0 && y>=500&& y<=500) {
+			back=cards.get(8);
 		}
 		repaint();
 		
@@ -161,7 +177,5 @@ public class CTPanel extends JPanel implements MouseListener{
 		// TODO Auto-generated method stub
 		
 	}
-	public void compareCards(BufferedImage t, BufferedImage s) {
-		
-	}
+	
 }
